@@ -209,8 +209,6 @@ router.delete("/delete-account", requireAuth, async (req, res) => {
   res.json({ message: "Account deleted" });
 });
 
-module.exports = router;
-
 router.get("/auth-test", requireAuth, (req, res) => {
   res.json({ success: true, userId: req.user.id });
 });
